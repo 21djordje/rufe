@@ -106,6 +106,15 @@ h6 span {
   padding-bottom: 145px;
 }
 
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
 /********************************
               Navbar
 ********************************/
@@ -113,11 +122,66 @@ h6 span {
 .navbar {
   padding-top: 14px;
   padding-bottom: 14px;
+  background-color: #ffffff;
 }
 
 .navbar-brand img {
   height: 76px;
   width: auto;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url(icons/Menu.svg);
+  background-size: 32px;
+}
+
+.nav-item {
+  border-bottom: 1px solid #888886;
+}
+
+.nav-item:last-child {
+  border-bottom: none;
+}
+
+.nav-link {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  transition: all 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.navbar-contact {
+  padding-right: 60px;
+}
+
+.navbar-contact .btn {
+  padding: 22px 63px;
+}
+
+.navbar-tel {
+  padding-right: 26px;
+}
+
+.navbar-tel a {
+  color: var(--black);
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  line-height: 1.18;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 /********************************
@@ -127,6 +191,8 @@ h6 span {
 .home-hero {
   min-height: 762px;
   position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .home-hero::after {
@@ -146,7 +212,7 @@ h6 span {
   top: 0;
   bottom: 0;
   height: 100%;
-  width: 870px;
+  width: 60%;
 }
 
 .home-hero-bg img {
@@ -178,6 +244,14 @@ h6 span {
   color: #ffffff;
   font-family: var(--font-secondary);
   font-size: 22px;
+}
+
+.home-hero .btn-wrap {
+  margin-bottom: 110px;
+}
+
+.arrow-down img {
+  transform: rotate(180deg);
 }
 
 /********************************
@@ -587,6 +661,11 @@ h2.accordion-header {
   border-right: 1px solid #ffffff;
   padding-left: 5px;
   padding-right: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.bottom-menu a:hover {
+  color: var(--color-primary);
 }
 
 .bottom-menu a:last-child {
@@ -598,23 +677,221 @@ h2.accordion-header {
             RESPONSIVE
 ********************************/
 
-@media (min-width: 1400px) {
-}
-
 @media (max-width: 1399px) {
+  h1 {
+    font-size: 90px;
+  }
+  h2 {
+    font-size: 60px;
+  }
+  .standard-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 @media (max-width: 1199px) {
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .standard-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .about-card-title {
+    font-size: 24px;
+  }
+  .about-card-text p {
+    font-size: 20px;
+  }
+  .about-card {
+    padding: 28px;
+  }
+  .plans-card-block {
+    padding-bottom: 40px;
+  }
+  .footer-menu {
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 992px) {
+  body {
+    padding-top: 80px;
+  }
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+  }
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .standard-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .home-hero-bg {
+    width: 100%;
+  }
+  .home-hero .btn-wrap {
+    margin-bottom: 0px;
+  }
+  .home-hero {
+    min-height: 400px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .about-section h2,
+  .units-section h2,
+  .plans-section h2,
+  .faq-section h2 {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .about-section .editor,
+  .units-section .editor {
+    max-width: 100%;
+  }
+  .about-section .btn-wrap {
+    text-align: center;
+  }
+  h2.accordion-header {
+    margin-bottom: 0px;
+  }
+  .accordion-button {
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .accordion-body {
+    padding: 20px 30px;
+  }
+  p {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  .footer-menu {
+    padding-top: 50px;
+  }
+  .footer-info {
+    max-width: 100%;
+    text-align: center;
+  }
+  .footer-menu-list {
+    max-width: 50%;
+    margin-right: 0px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .units-image {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 768px) {
-}
-
-@media (min-width: 576px) {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .standard-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .plans-card-block {
+    padding-bottom: 0px;
+    padding-top: 40px;
+  }
+  .units-image {
+    padding-top: 50px;
+  }
+  .accordion-button {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .accordion-body p {
+    font-size: 16px;
+  }
+  .accordion-body {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 591px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .hero-text p {
+    font-size: 18px;
+  }
+  .standard-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .about-section h2,
+  .units-section h2,
+  .plans-section h2,
+  .faq-section h2 {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2.accordion-header {
+    margin-bottom: 0px;
+  }
+  .footer-lists {
+    flex-direction: column;
+  }
+  .footer-menu-list {
+    padding-bottom: 30px;
+    padding: 0px 0px 30px;
+  }
+  .footer-menu-list:last-child {
+    margin: 0 auto;
+  }
+  .footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .bottom-menu a,
+  .copy-text {
+    text-align: center;
+  }
+  .bottom-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom-menu a {
+    border-right: none;
+    margin-bottom: 10px;
+  }
+  .bottom-menu a:last-child,
+  .bottom-menu a {
+    padding-right: 5px;
+  }
+  .navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .navbar-brand img {
+    height: 50px;
+  }
+  body {
+    padding-top: 60px;
+  }
 }

@@ -531,8 +531,12 @@ p {
   width: 840px !important;
 } */
 
-.swiper {
+/* .swiper {
   overflow: visible;
+} */
+
+.testimonials-slider {
+  position: relative;
 }
 
 .swiper-slide-active {

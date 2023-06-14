@@ -41,6 +41,7 @@ body {
   font-family: var(--font-primary);
   padding-top: 104px;
   color: #000000;
+  overflow-x: hidden !important;
 }
 
 /********************************
@@ -466,6 +467,127 @@ p {
 }
 
 /********************************
+           Testimonials
+********************************/
+
+.testimonials-section h2 {
+  max-width: 910px;
+  color: #000000;
+  margin-bottom: 104px;
+}
+
+.slide-photo {
+  height: 193px;
+  width: 193px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 27px;
+}
+
+.slide-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-name {
+  color: var(--dark);
+  font-weight: 500;
+  margin-bottom: 13px;
+  font-family: var(--font-secondary);
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.slide-job {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 1.19;
+  font-family: var(--font-secondary);
+}
+
+.slide-right p:last-child {
+  margin-bottom: 0px;
+}
+
+.slide-right {
+  padding-left: 37px;
+}
+
+.slide-right p {
+  font-size: 26px;
+  font-family: var(--font-secondary);
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+.single-slide {
+  background-color: var(--grey);
+  border-radius: 20px;
+  padding: 81px 55px;
+}
+
+/* .swiper-slide {
+  width: 840px !important;
+} */
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-slide-active {
+  background-color: var(--color-primary);
+}
+
+.swiper-slide-active .slide-job,
+.swiper-slide-active .slide-name,
+.swiper-slide-active .slide-right p {
+  color: #ffffff;
+}
+
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  right: 55px;
+  height: 40px;
+  width: 40px;
+  background-image: url(icons/q.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: -100px;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  background-image: url(icons/prev.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+}
+
+.swiper-button-next {
+  right: 0px;
+  background-color: var(--color-primary);
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev {
+  left: unset;
+  right: 80px;
+  background-color: var(--black);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+/********************************
           Units
 ********************************/
 
@@ -795,6 +917,12 @@ h2.accordion-header {
   .units-image {
     padding-top: 80px;
   }
+  .slide-right p {
+    font-size: 22px;
+  }
+  .testimonials-section h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -826,6 +954,26 @@ h2.accordion-header {
   .accordion-body {
     padding: 15px;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -60px;
+    width: 64px;
+    height: 64px;
+  }
+  .single-slide {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .slide-right {
+    padding-top: 20px;
+  }
+  .single-slide::after {
+    display: none;
+  }
+  .slide-right {
+    padding-left: 0px;
+  }
 }
 
 @media (max-width: 591px) {
@@ -848,6 +996,7 @@ h2.accordion-header {
   .faq-section h2 {
     margin-bottom: 40px;
   }
+
   p {
     font-size: 16px;
   }
@@ -893,5 +1042,16 @@ h2.accordion-header {
   }
   body {
     padding-top: 60px;
+  }
+  .footer-menu-list {
+    text-align: center;
+  }
+  .slide-photo {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto 10px;
+  }
+  .slide-right p {
+    font-size: 18px;
   }
 }

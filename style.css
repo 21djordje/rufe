@@ -893,6 +893,24 @@ h2.accordion-header {
 }
 
 /********************************
+         Units page
+********************************/
+
+.page-top {
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+.page-top h2 {
+  color: #ffffff;
+  margin-bottom: 27px;
+}
+
+.page-top .intro-text {
+  max-width: 612px;
+}
+
+/********************************
             RESPONSIVE
 ********************************/
 

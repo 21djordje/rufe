@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png" />
+    <title>Rufe Snow Depot</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand py-0" href="index.html"
+          ><img src="icons/logo.svg" alt=""
+        /></a>
+        <div class="nav-wrap d-flex">
+          <div class="navbar-contact d-none d-lg-flex align-items-center">
+            <div class="navbar-tel">
+              <a href="tel:(817) 350 - 6427"
+                >Call Us: <span>(817) 350 - 6427</span></a
+              >
+            </div>
+            <a href="contact.html" class="btn btn-primary">CONTACT US</a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Units</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page top -->
+
+    <div class="page-top bg-dark" id="top">
+      <div class="container">
+        <h2 class="text-center">View all <span>Units</span></h2>
+        <div class="intro-text text-center">
+          <p>
+            With over 400 rentable spaces, <span>Rufe Snow Depot Self Storage</span> is sure
+            to have something that will work for your next storage project.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Units-->
+
+    <div class="page-units">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="units-table-block">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">All units</a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#small">Small</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#medium">Medium</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#large">Large</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#parking">Parking</a>
+                              </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="all">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Size</th>
+                                        <th>Type</th>
+                                        <th>Features</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="table-size">5x5</td>
+                                        <td class="table-type">Small</td>
+                                        <td class="table-feature">Climate controlled</td>
+                                        <td class="table-price">$50</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="table-size">5x10</td>
+                                        <td class="table-type">Medium</td>
+                                        <td class="table-feature">24/7 access</td>
+                                        <td class="table-price">$80</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="table-size">10x10</td>
+                                        <td class="table-type">Large</td>
+                                        <td class="table-feature">Security cameras</td>
+                                        <td class="table-price">$120</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="table-size">12x50</td>
+                                        <td class="table-type">Parking</td>
+                                        <td class="table-feature">Security cameras</td>
+                                        <td class="table-price">$40</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                            </div>
+                            <div class="tab-pane fade" id="small">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Size</th>
+                                        <th>Type</th>
+                                        <th>Features</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="table-size">5x5</td>
+                                        <td class="table-type">Small</td>
+                                        <td class="table-feature">Climate controlled</td>
+                                        <td class="table-price">$50</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="table-size">5x5</td>
+                                        <td class="table-type">Small</td>
+                                        <td class="table-feature">24/7 access</td>
+                                        <td class="table-price">$50</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="tab-pane fade" id="medium">
+                              <table class="table">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Size</th>
+                                        <th>Type</th>
+                                        <th>Features</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="table-size">15x5</td>
+                                        <td class="table-type">Medium</td>
+                                        <td class="table-feature">Climate controlled</td>
+                                        <td class="table-price">$50</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="table-size">5x10</td>
+                                        <td class="table-type">Medium</td>
+                                        <td class="table-feature">24/7 access</td>
+                                        <td class="table-price">$80</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </table>
+                            </div>
+                            <div class="tab-pane fade" id="large">
+                              <table class="table">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Size</th>
+                                        <th>Type</th>
+                                        <th>Features</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="table-size">10x10</td>
+                                        <td class="table-type">Large</td>
+                                        <td class="table-feature">Security cameras</td>
+                                        <td class="table-price">$120</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </table>
+                            </div>
+                            <div class="tab-pane fade" id="parking">
+                              <table class="table">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Size</th>
+                                        <th>Type</th>
+                                        <th>Features</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="table-size">12x50</td>
+                                        <td class="table-type">Parking</td>
+                                        <td class="table-feature">Security cameras</td>
+                                        <td class="table-price">$40</td>
+                                        <td class="table-action"><button class="btn btn-primary">Call</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </table>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="main-footer bg-dark">
+      <div class="container">
+        <div class="footer-top standard-padding">
+          <div
+            class="footer-heading d-flex justify-content-between align-items-end"
+          >
+            <h2>
+              We’ll be <span>happy</span> to share all that we know to make you
+              feel more at home.
+            </h2>
+
+            <a
+              href="#top"
+              class="arrow-top align-content-center justify-content-center d-none d-xl-flex"
+              ><img src="icons/Arrow.svg" alt=""
+            /></a>
+          </div>
+          <div
+            class="footer-menu d-flex justify-content-between align-items-center flex-column flex-lg-row align-items-lg-start"
+          >
+            <div class="footer-info pb-5 pb-lg-0">
+              <div class="footer-info-title">Rufe Snow Depot</div>
+              <div class="footer-ingo-desc">
+                Convenient storage service in Watauga, TX
+              </div>
+            </div>
+            <div class="footer-lists d-flex">
+              <div class="footer-menu-list">
+                <div class="menu-title">Contact</div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://goo.gl/maps/kDo6h81xDkwbYQGF7"
+                      target="_blank"
+                      >6707 Rufe Snow Drive Watauga, TX 76148
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:(817) 281-2992" target="_blank">
+                      (817) 281-2992
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:info@example.com" target="_blank">
+                      info@example.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-menu-list">
+                <div class="menu-title">Social</div>
+                <ul>
+                  <li><a href="#" target="_blank">Instagram</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">Youtube</a></li>
+                  <li><a href="#" target="_blank">Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="container d-flex justify-content-between flex-column flex-xl-row align-items-center"
+        >
+          <div class="copy-text order-2 order-xl-1">
+            © 2023 Rufe Snow Depot Self Storage, partners and affiliates
+          </div>
+          <div class="bottom-menu order-1 order-xl-2 pb-4 pb-xl-0">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Cookies Policy</a>
+            <a href="">Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

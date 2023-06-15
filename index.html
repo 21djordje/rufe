@@ -4,17 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="styles/swiper.css"
-    />
+    <link rel="stylesheet" href="styles/swiper.css" />
     <link rel="stylesheet" href="style.css?v=2" />
     <link rel="icon" type="image/x-icon" href="icons/favicon.png" />
     <title>Rufe Snow Depot</title>
@@ -359,7 +356,7 @@
         <div class="testimonials-slider">
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
-          <div class="swiper">
+          <div class="swiper testimonials-swiper">
             <div class="swiper-wrapper">
               <div class="single-slide d-flex align-items-center swiper-slide">
                 <div class="slide-left text-center">
@@ -372,7 +369,61 @@
                 <div class="slide-right">
                   <p>
                     I have had a great experience with Rufe Snow Dpot since Jan
-                    2018. My interactions with the storage have been very
+                    2019. My interactions with the storage have been very
+                    pleasent, friendly and positive. The location is secure and
+                    very convenient, and I would recommend this facility to
+                    everyone.
+                  </p>
+                </div>
+              </div>
+              <div class="single-slide d-flex align-items-center swiper-slide">
+                <div class="slide-left text-center">
+                  <div class="slide-photo">
+                    <img src="img/testimonials.jpg" alt="" />
+                  </div>
+                  <div class="slide-name">Noha Elipsey</div>
+                  <div class="slide-job">CEO Hoomes</div>
+                </div>
+                <div class="slide-right">
+                  <p>
+                    I have had a great experience with Rufe Snow Dpot since Jan
+                    2019. My interactions with the storage have been very
+                    pleasent, friendly and positive. The location is secure and
+                    very convenient, and I would recommend this facility to
+                    everyone.
+                  </p>
+                </div>
+              </div>
+              <div class="single-slide d-flex align-items-center swiper-slide">
+                <div class="slide-left text-center">
+                  <div class="slide-photo">
+                    <img src="img/testimonials.jpg" alt="" />
+                  </div>
+                  <div class="slide-name">Noha Elipsey</div>
+                  <div class="slide-job">CEO Hoomes</div>
+                </div>
+                <div class="slide-right">
+                  <p>
+                    I have had a great experience with Rufe Snow Dpot since Jan
+                    2019. My interactions with the storage have been very
+                    pleasent, friendly and positive. The location is secure and
+                    very convenient, and I would recommend this facility to
+                    everyone.
+                  </p>
+                </div>
+              </div>
+              <div class="single-slide d-flex align-items-center swiper-slide">
+                <div class="slide-left text-center">
+                  <div class="slide-photo">
+                    <img src="img/testimonials.jpg" alt="" />
+                  </div>
+                  <div class="slide-name">Noha Elipsey</div>
+                  <div class="slide-job">CEO Hoomes</div>
+                </div>
+                <div class="slide-right">
+                  <p>
+                    I have had a great experience with Rufe Snow Dpot since Jan
+                    2019. My interactions with the storage have been very
                     pleasent, friendly and positive. The location is secure and
                     very convenient, and I would recommend this facility to
                     everyone.
@@ -408,7 +459,43 @@
                 <div class="slide-right">
                   <p>
                     I have had a great experience with Rufe Snow Dpot since Jan
-                    2018. My interactions with the storage have been very
+                    2019. My interactions with the storage have been very
+                    pleasent, friendly and positive. The location is secure and
+                    very convenient, and I would recommend this facility to
+                    everyone.
+                  </p>
+                </div>
+              </div>
+              <div class="single-slide d-flex align-items-center swiper-slide">
+                <div class="slide-left text-center">
+                  <div class="slide-photo">
+                    <img src="img/testimonials.jpg" alt="" />
+                  </div>
+                  <div class="slide-name">Noha Elipsey</div>
+                  <div class="slide-job">CEO Hoomes</div>
+                </div>
+                <div class="slide-right">
+                  <p>
+                    I have had a great experience with Rufe Snow Dpot since Jan
+                    2020. My interactions with the storage have been very
+                    pleasent, friendly and positive. The location is secure and
+                    very convenient, and I would recommend this facility to
+                    everyone.
+                  </p>
+                </div>
+              </div>
+              <div class="single-slide d-flex align-items-center swiper-slide">
+                <div class="slide-left text-center">
+                  <div class="slide-photo">
+                    <img src="img/testimonials.jpg" alt="" />
+                  </div>
+                  <div class="slide-name">Noha Elipsey</div>
+                  <div class="slide-job">CEO Hoomes</div>
+                </div>
+                <div class="slide-right">
+                  <p>
+                    I have had a great experience with Rufe Snow Dpot since Jan
+                    2019. My interactions with the storage have been very
                     pleasent, friendly and positive. The location is secure and
                     very convenient, and I would recommend this facility to
                     everyone.
@@ -705,11 +792,24 @@
     <script>
       var swiper = new Swiper(".swiper", {
         slidesPerView: 1,
-        spaceBetween: 35,
+        centeredSlides: true,
         loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            var activeSlide = this.slides[this.activeIndex];
+
+            // Ukloni .active sa svih slajdova
+            this.slides.forEach(function (slide) {
+              slide.classList.remove("active");
+            });
+
+            // Dodaj .active aktivnom slajdu
+            activeSlide.classList.add("active");
+          },
         },
       });
     </script>

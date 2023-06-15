@@ -89,6 +89,7 @@ h6 span {
   border-radius: 36px;
   border: none;
   transition: all 0.3s ease-out;
+  border: 1px solid transparent;
 }
 
 .btn-primary,
@@ -98,7 +99,8 @@ h6 span {
 }
 
 .btn-primary:hover {
-  background-color: transparent;
+  background-color: #ffffff;
+  border: 1px solid var(--color-primary);
   color: var(--color-primary);
 }
 
@@ -175,6 +177,31 @@ h6 span {
 .navbar-tel {
   padding-right: 26px;
 }
+
+.navbar-tel a span {
+  position: relative;
+}
+
+.navbar-tel a span:hover {
+  color: #888886;
+}
+
+.navbar-tel a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background-color: #888886;
+  transition: width 0.2s ease;
+}
+
+.navbar-tel a span:hover::after {
+  width: 100%;
+}
+
+
 
 .navbar-tel a {
   color: var(--black);

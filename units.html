@@ -103,13 +103,21 @@
     <div class="page-units">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-xl-8">
             <div class="units-table-block">
-              <a data-toggle="portfilter" data-target="all">All</a>
-              <a data-toggle="portfilter" data-target="small">Small</a>
-              <a data-toggle="portfilter" data-target="medium">Medium</a>
-              <a data-toggle="portfilter" data-target="large">Large</a>
-              <a data-toggle="portfilter" data-target="parking">Parking</a>
+              <div
+                class="table-filters d-flex align-items-center justify-content-center justify-content-md-start text-center flex-wrap"
+              >
+                <a data-toggle="portfilter" data-target="all">All Units</a>
+                <a data-toggle="portfilter" data-target="small">Small Units</a>
+                <a data-toggle="portfilter" data-target="medium"
+                  >Medium Units</a
+                >
+                <a data-toggle="portfilter" data-target="large">Large Units</a>
+                <a data-toggle="portfilter" data-target="parking" class="h-100"
+                  >Parking</a
+                >
+              </div>
 
               <div class="units-table">
                 <table class="table">
@@ -119,7 +127,7 @@
                       <th>Type</th>
                       <th>Features</th>
                       <th>Price</th>
-                      <th>Action</th>
+                      <th class="text-center">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -278,7 +286,10 @@
         $('[data-toggle="portfilter"]').click(function () {
           var target = $(this).data("target");
           filterTable(target);
+          setActiveLink($(this));
         });
+
+        $('[data-target="all"]').addClass("active");
 
         function filterTable(target) {
           if (target === "all") {
@@ -287,6 +298,11 @@
             $(".units-table tbody tr").hide();
             $('.units-table tbody tr[data-tag="' + target + '"]').show();
           }
+        }
+
+        function setActiveLink(link) {
+          $('[data-toggle="portfilter"]').removeClass("active");
+          link.addClass("active");
         }
       });
     </script>

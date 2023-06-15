@@ -201,8 +201,6 @@ h6 span {
   width: 100%;
 }
 
-
-
 .navbar-tel a {
   color: var(--black);
   font-size: 16px;
@@ -558,13 +556,12 @@ p {
   max-width: 840px;
 }
 
-
-
 .testimonials-slider {
   position: relative;
 }
 
-.swiper-slide-active, .swiper-slide.active {
+.swiper-slide-active,
+.swiper-slide.active {
   background-color: var(--color-primary);
   margin-right: 35px;
 }
@@ -572,7 +569,9 @@ p {
 .swiper-slide-active .slide-job,
 .swiper-slide-active .slide-name,
 .swiper-slide-active .slide-right p,
-.swiper-slide.active .slide-job, .swiper-slide.active .slide-name, .swiper-slide.active .slide-right p {
+.swiper-slide.active .slide-job,
+.swiper-slide.active .slide-name,
+.swiper-slide.active .slide-right p {
   color: #ffffff;
 }
 
@@ -636,6 +635,87 @@ p {
   width: 100%;
   height: 365px;
   object-fit: cover;
+}
+
+.page-units {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.units-table-block a {
+  border: 2px solid #dfdfdf;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #11142d;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-right: 20px;
+  text-decoration: none !important;
+}
+
+.units-table-block a:hover {
+  cursor: pointer;
+}
+
+.units-table-block a.active {
+  background-color: var(--color-primary);
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid var(--color-primary);
+}
+
+.units-table {
+  padding-top: 25px;
+}
+
+.units-table .table thead tr th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--font-secondary);
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.units-table .table thead tr th {
+  color: var(--dark);
+}
+
+.units-table .table td {
+  vertical-align: middle;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.table-size {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.table-type,
+.table-feature {
+  color: #11142d;
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: var(--font-secondary);
+}
+
+.table-price {
+  color: #11142d;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.table-action button.btn {
+  width: 100%;
+  padding: 15px 21px;
 }
 
 /********************************
@@ -846,7 +926,7 @@ h2.accordion-header {
 }
 
 .contact-page .intro-text p {
-  color: #ffffff  ;
+  color: #ffffff;
 }
 
 .contact-form {
@@ -870,7 +950,7 @@ h2.accordion-header {
   color: var(--color-primary);
 }
 
-.contact-form  ::placeholder {
+.contact-form ::placeholder {
   color: #888886;
   font-size: 12px;
   line-height: 1.6;
@@ -879,13 +959,13 @@ h2.accordion-header {
 
 .contact-form .form-control {
   padding: 10px 18px;
-  border: 1px solid #E4E4E4;
+  border: 1px solid #e4e4e4;
   border-radius: 3px;
 }
 
 .form-control:focus {
-   color: var(--dark);
-   box-shadow: none;
+  color: var(--dark);
+  box-shadow: none;
 }
 
 .contact-form .btn {
@@ -1044,7 +1124,13 @@ h2.accordion-header {
   .contact-page .intro-text {
     margin-bottom: 60px;
   }
-  
+  .page-units {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .units-table-block a {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1095,6 +1181,21 @@ h2.accordion-header {
   }
   .slide-right {
     padding-left: 0px;
+  }
+  .units-table .table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .table-size,
+  .table-price {
+    font-size: 20px;
+  }
+  .table-type,
+  .table-feature {
+    font-size: 16px;
+  }
+  .table-filters a {
+    margin-bottom: 10px;
   }
 }
 
@@ -1186,15 +1287,29 @@ h2.accordion-header {
   .contact-form .btn {
     padding: 20px 20px;
     width: 100%;
+  }
+  .table-filters a {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .table-size,
+  .table-price {
+    font-size: 18px;
+  }
+  .table-type,
+  .table-feature {
+    font-size: 14px;
+  }
+  .table-action button.btn {
+    padding: 10px 15px;
+  }
 }
-}
-
 
 @media only screen and (min-width: 1700px) {
-.testimonials-swiper {
+  .testimonials-swiper {
     width: 150%;
     /* margin-right: -50%; */
-}
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1203,6 +1318,3 @@ h2.accordion-header {
     width: 123%;
   }
 }
-
-
-
